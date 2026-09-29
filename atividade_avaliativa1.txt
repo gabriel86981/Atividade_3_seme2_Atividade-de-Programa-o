@@ -1,0 +1,223 @@
+GABRIEL RODRIGUES PEREIRA
+
+ EXERCÍCIO 01 
+========================================
+
+package idades_das_irmas;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        int ida1, ida2, ida3;
+
+        ida1 = scanner.nextInt();
+        ida2 = scanner.nextInt();
+        ida3 = scanner.nextInt();
+
+        if (ida1 > ida2 && ida2 > ida3) {
+            System.out.println(ida2);
+        } else if (ida1 > ida3 && ida3 > ida2) {
+            System.out.println(ida3);
+        } else if (ida2 > ida1 && ida1 > ida3) {
+            System.out.println(ida1);
+        } else if (ida2 > ida3 && ida3 > ida1) {
+            System.out.println(ida3);
+        } else if (ida3 > ida1 && ida1 > ida2) {
+            System.out.println(ida1);
+        } else {
+            System.out.println(ida2);
+        }
+
+    
+    }
+}
+
+
+
+----------------------------------------
+
+ EXERCÍCIO 02
+==========================================
+
+package torneio_de_tenis;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        String jogo1, jogo2, jogo3, jogo4, jogo5, jogo6;
+        int vitorias = 0;
+
+        jogo1 = scanner.next();
+        jogo2 = scanner.next();
+        jogo3 = scanner.next();
+        jogo4 = scanner.next();
+        jogo5 = scanner.next();
+        jogo6 = scanner.next();
+
+        if (jogo1.equals("V")) {
+            vitorias++;
+        }
+
+        if (jogo2.equals("V")) {
+            vitorias++;
+        }
+
+        if (jogo3.equals("V")) {
+            vitorias++;
+        }
+
+        if (jogo4.equals("V")) {
+            vitorias++;
+        }
+
+        if (jogo5.equals("V")) {
+            vitorias++;
+        }
+
+        if (jogo6.equals("V")) {
+            vitorias++;
+        }
+
+        if (vitorias >= 5) {
+            System.out.println(1);
+        } else if (vitorias >= 3) {
+            System.out.println(2);
+        } else if (vitorias >= 1) {
+            System.out.println(1);
+        } else {
+            System.out.println(-1);
+        }
+
+    }
+}
+
+
+
+
+----------------------------------------
+
+EXERCÍCIO 03 
+=======================================
+
+package calculo_rapido;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        int s, a, b;
+        int quantidade = 0;
+
+        s = scanner.nextInt();
+        a = scanner.nextInt();
+        b = scanner.nextInt();
+
+        while (a <= b) {
+
+            int numero = a;
+            int soma = 0;
+
+            while (numero > 0) {
+                soma = soma + numero % 10;
+                numero = numero / 10;
+            }
+
+            if (soma == s) {
+                quantidade++;
+            }
+
+            a++;
+        }
+
+        System.out.println(quantidade);
+
+     
+    }
+}
+
+
+
+
+----------------------------------------
+
+ EXERCÍCIO 4
+========================================
+
+package jogo_de_dominos;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        int n;
+        int pecas;
+
+        n = scanner.nextInt();
+
+        pecas = (n + 1) * (n + 2) / 2;
+
+        System.out.println(pecas);
+
+           }
+}
+
+
+----------------------------------------
+
+EXERCÍCIO 5
+================================
+
+package corrida;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        int n1, d1, v1;
+        int n2, d2, v2;
+
+        double tempo1, tempo2;
+
+        n1 = scanner.nextInt();
+        d1 = scanner.nextInt();
+        v1 = scanner.nextInt();
+
+        n2 = scanner.nextInt();
+        d2 = scanner.nextInt();
+        v2 = scanner.nextInt();
+
+        tempo1 = (double) d1 / (v1 * 1000);
+        tempo2 = (double) d2 / (v2 * 1000);
+
+        if (tempo1 < tempo2) {
+            System.out.println(n1);
+        } else {
+            System.out.println(n2);
+        }
+
+           }
+}
+
+
